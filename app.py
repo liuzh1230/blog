@@ -7,6 +7,8 @@ print("FLASK_ENV:", os.getenv("FLASK_ENV"))
 
 
 from flask import Flask   #这个类表示一个Flask程序
+from flask import url_for #用于获取url
+
 app=Flask(__name__)   #实例化这个类，得到程序实例app
                       #传入的第一个参数是模块或包的名称，这里应该使用特殊变量__name__
                       #python会根据所处的模块赋予该变量相应的值，这里这个值为app
@@ -28,6 +30,8 @@ def say_hello():
 #给变量指定默认值，当输入时未包含变量，则name=Programmer，以避免报错
 def greet(name):
     return '<h1>Hello, %s!</h1>' % name  #%s 是 Python 的字符串格式化占位符，意思是“把后面的变量按字符串插入到这里”。
+
+#s=url_for('greet',name='Jack')  #s为"/greet/Jack"
 
 
 #Flask内置了一个CLI系统，让我们可以在终端中进行启动/停止 Flask 应用等一系列操作
