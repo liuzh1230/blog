@@ -1,0 +1,7 @@
+# 环境变量文件
+.env
+.flaskenv
+
+# 如果你也有 pipenv 或 venv 虚拟环境
+.venv/
+Pipfile.lock
